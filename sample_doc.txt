@@ -1,0 +1,9 @@
+RAG Demo Document
+
+Retrieval Augmented Generation, or RAG, is a pattern where an application retrieves relevant context from external documents before asking a language model to answer a question.
+
+This sample project supports multiple chunking strategies including fixed, recursive, sentence, markdown, semantic, parent-child, code, and table chunking.
+
+For production, the recommended default is recursive chunking with reranking enabled. For long policies or legal documents, parent-child chunking often works better because the retriever can search small chunks while the model receives larger parent context.
+
+The API exposes /ingest for JSON text ingestion, /ingest/file for uploading files, /chat for asking questions, and /health for a health check.
